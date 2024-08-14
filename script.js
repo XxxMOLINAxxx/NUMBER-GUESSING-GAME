@@ -1,6 +1,5 @@
 // Do not remove this line
 const prompt = require("syncprompt");
-const randomNumber = Math.ceil(Math.random() * 20);
 
 // Generate a random number between 1 and 20
 const randomNumber = Math.ceil(Math.random() * 20);
