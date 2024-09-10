@@ -9,12 +9,22 @@ function compareDates(date1, date2) {
 	}
 }
 
-const date1 = new Date("2024-09-01");
-const date2 = new Date("2024-09-04");
-const date3 = new Date("2024-09-01");
+const d1 = new Date("2024-09-01");
+const d2 = new Date("2024-09-04");
+const d3 = new Date("2024-09-01");
 
-console.log(compareDates(date1, date2));
-console.log(compareDates(date2, date1));
-console.log(compareDates(date1, date3));
+console.log(compareDates(d1, d2));
+console.log(compareDates(d2, d1));
+console.log(compareDates(d1, d3));
 
 // Currency Formatting
+function formatUSCurrency(amount) {
+	return Intl.NumberFormat("en-Latn-US", {
+		style: "currency",
+		currency: "USD",
+	}).format(amount);
+}
+
+console.log(formatUSCurrency(56.9));
+
+// Generating Random User IDs
