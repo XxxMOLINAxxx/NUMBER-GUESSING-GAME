@@ -28,3 +28,27 @@ function formatUSCurrency(amount) {
 console.log(formatUSCurrency(56.9));
 
 // Generating Random User IDs
+function generateUserID(length) {
+	const chars = "abc123XYZ789";
+	let userID = "";
+	for (let i = 0; i < length; i++) {
+		const randomIndex = Math.floor(Math.random() * chars.length);
+		userID += chars[randomIndex];
+	}
+	return userID;
+}
+
+const userID = generateUserID(10);
+console.log(userID);
+
+// Calculating Time Difference in Hours and Minutes
+function timeDifference(startTime, endTime) {
+	const diffInMs = endTime - startTime;
+	const hours = Math.floor(diffInMs / (1000 * 60 * 60));
+	const minutes = Math.floor((diffInMs % (1000 * 60 * 60)) / (1000 * 60));
+	return `${hours} hours and ${minutes} minutes`;
+}
+
+const start = new Date("2024-09-09T08:30:00");
+const end = new Date("2024-09-09T14:45:00");
+console.log(timeDifference(start, end));
